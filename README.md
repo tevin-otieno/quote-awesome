@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # QuoteAwesome
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
@@ -25,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# quote-awesome
+This is an Angular application that has the functionality of posting quotes their authors and even vote on the quotes to see how long they have been posted.
+>>>>>>> e19e7876723b5b96c5d88563310192da08e7e00e
