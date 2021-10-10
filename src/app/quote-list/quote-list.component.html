@@ -2,7 +2,7 @@
   <h2>Quote Wall</h2>
   <hr>
     <ul class="list-group">
-        <li *ngFor="let quote of sortQuotes let i= index" class="list-group-item">
+        <li *ngFor='let quote of quotes  let i=index' class="list-group-item">
           <div>
             <div class="position-relative">
               <img src="..." class="rounded mr-2" alt="...">
@@ -22,11 +22,11 @@
                 ~{{quote.author}}
             </p>
             <div>
-              <button type="button" class="btn btn-success" (click)='upvote(true,this.quote.id)'>
-                Inspiring <span>{{quote.inspiration}}</span>
-              </button>
-              <button type="button" class="btn btn-danger" (click)='downvote()'>
-                Terrible <span>{{quote.terrible}}</span>
+              <!-- <button type="button" class="btn btn-outline-success" (click)='upvote()'>
+                Inspiring <span class="badge badge-light">{{quoty.inspiration}}</span>
+              </button> -->
+              <button type="button" class="btn btn-outline-danger" (click)='downvote()'>
+                Terrible <!-- <span class="badge badge-danger">{{quoty.terrible}}</span> -->
               </button>
             </div>
           </div>

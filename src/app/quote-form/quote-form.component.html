@@ -1,17 +1,17 @@
 <div >
   <h2>Post Quote</h2>
   <hr>
-  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+  <form (ngSubmit)='addQuote()'>
     <div class="form-floating mb-3">
-      <input type="Text" class="form-control" id="name" placeholder="Name">
+      <input type="Text" class="form-control" id="name" placeholder="Name" [(ngModel)]="quoted.name" #name='ngModel'>
       <label for="name">Name</label>
     </div>
     <div class="form-floating mb-3">
-      <input type="Text" class="form-control" id="Author" placeholder="Author">
+      <input type="Text" class="form-control" id="Author" placeholder="Author" [(ngModel)]="quoted.author" #author='ngModel'>
       <label for="Author">Author</label>
     </div>
     <div class="form-floating mb-3">
-      <textarea class="form-control" placeholder="Amaze the world" id="Textarea" style="height: 100px"></textarea>
+      <textarea class="form-control" placeholder="Amaze the world" id="Textarea" [(ngModel)]="quoted.quote" name="quote" #quote='ngModel' style="height: 100px"></textarea>
       <label for="Textarea">Quote</label>
     </div>
     <button type="submit" class="btn btn-outline-primary">Submit Quote</button>

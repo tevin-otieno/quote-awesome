@@ -35,9 +35,7 @@ export class QuoteListComponent implements OnInit {
     this.isComlete.emit(doDelete);
   }
   upvote(isClicked:any,index:any){
-    if (isClicked){
-      this.quote[index].inspiration+=1;
-    }
+    this.quote.inspiration+=1;
   }
   downvote(){
     this.quote.terrible+=1;
