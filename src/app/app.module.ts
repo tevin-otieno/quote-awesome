@@ -8,6 +8,7 @@ import { QuoteListComponent } from './quote-list/quote-list.component';
 import { HighlightQuoteDirective } from './highlight-quote.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DatePipe } from './date.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DatePipe } from './date.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

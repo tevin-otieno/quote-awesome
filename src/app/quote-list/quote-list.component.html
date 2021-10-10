@@ -7,7 +7,7 @@
             <div class="position-relative">
               <img src="..." class="rounded mr-2" alt="...">
               <strong > {{quote.name}}</strong>
-              <small>Posted: {{quote.date|date}} days ago.</small>
+              <small class="pl-3">Posted: {{quote.date|date}} days ago.</small>
               <button type="button" class="btn btn-outline-danger position-absolute top-0 end-0" id="del" (click)='deleteQuote(true)'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
                     <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
@@ -22,11 +22,11 @@
                 ~{{quote.author}}
             </p>
             <div>
-              <button type="button" class="btn btn-outline-success">
-                Inspiring <span class="badge badge-light">4</span>
+              <button type="button" class="btn btn-success" (click)='upvote()'>
+                Inspiring <span>{{quote.inspiration}}</span>
               </button>
-              <button type="button" class="btn btn-outline-danger">
-                Terrible <span class="badge badge-danger">4</span>
+              <button type="button" class="btn btn-danger" (click)='downvote()'>
+                Terrible <span>{{quote.terrible}}</span>
               </button>
             </div>
           </div>

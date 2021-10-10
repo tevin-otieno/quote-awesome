@@ -1,7 +1,10 @@
 export class Quote {
-    pubDate: any;
+    public inspiration;
+    public terrible;
 
-    constructor(public id:number, public name:string, public quote:string, public author:string, public date:Date, public inspiration:number, public terrible:number){
+    constructor(public id:number, public name:string, public quote:string, public author:string, public date:Date){
+        this.inspiration=0;
+        this.terrible=0;
 
     }
 }
