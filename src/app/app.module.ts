@@ -7,13 +7,15 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteListComponent } from './quote-list/quote-list.component';
 import { HighlightQuoteDirective } from './highlight-quote.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DatePipe } from './date.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteFormComponent,
     QuoteListComponent,
-    HighlightQuoteDirective
+    HighlightQuoteDirective,
+    DatePipe
   ],
   imports: [
     BrowserModule,
