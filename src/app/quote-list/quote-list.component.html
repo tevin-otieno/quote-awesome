@@ -1,4 +1,6 @@
-<div>
+<div class="row">
+  <app-quote-form class="col-4" (addQuote)="addNewQuote"></app-quote-form>
+<div class="col-8">
   <h2>Quote Wall</h2>
   <hr>
     <ul class="list-group">
@@ -22,14 +24,15 @@
                 ~{{quote.author}}
             </p>
             <div>
-              <!-- <button type="button" class="btn btn-outline-success" (click)='upvote()'>
-                Inspiring <span class="badge badge-light">{{quoty.inspiration}}</span>
-              </button> -->
+              <button type="button" class="btn btn-outline-success" (click)='upvote($event,i)'>
+                Inspiring <span class="badge badge-light">{{quote.inspiration}}</span>
+              </button>
               <button type="button" class="btn btn-outline-danger" (click)='downvote()'>
-                Terrible <!-- <span class="badge badge-danger">{{quoty.terrible}}</span> -->
+                Terrible <span class="badge badge-danger">{{quote.terrible}}</span>
               </button>
             </div>
           </div>
         </li>
       </ul>    
+</div>
 </div>
