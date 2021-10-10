@@ -9,6 +9,7 @@ import { HighlightQuoteDirective } from './highlight-quote.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DatePipe } from './date.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    FormsModule,
     BrowserAnimationsModule
   ],
   providers: [],

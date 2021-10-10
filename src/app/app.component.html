@@ -3,7 +3,7 @@
     <h1 class="mt-4 mb-4 text-center">{{title | uppercase}}</h1>
   </div>
   <div class="row">
-    <app-quote-form class="col-4"></app-quote-form>
+    <app-quote-form class="col-4" (addQuote)="addNewQuote"></app-quote-form>
     <app-quote-list class="col-8"></app-quote-list>
   </div>
   <footer class="bg-dark text-center text-white">

@@ -22,7 +22,7 @@
                 ~{{quote.author}}
             </p>
             <div>
-              <button type="button" class="btn btn-success" (click)='upvote()'>
+              <button type="button" class="btn btn-success" (click)='upvote(true,this.quote.id)'>
                 Inspiring <span>{{quote.inspiration}}</span>
               </button>
               <button type="button" class="btn btn-danger" (click)='downvote()'>

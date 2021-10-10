@@ -1,7 +1,7 @@
 <div >
   <h2>Post Quote</h2>
   <hr>
-  <form (ngSubmit)='submitQuote()' >
+  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
     <div class="form-floating mb-3">
       <input type="Text" class="form-control" id="name" placeholder="Name">
       <label for="name">Name</label>
