@@ -27,6 +27,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@popperjs/core": "^2.10.2",
     "ajv": "^6.12.6",
+    "angular-confirmation-popover": "^6.0.0",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^5.1.2",
     "jquery": "^3.6.0",

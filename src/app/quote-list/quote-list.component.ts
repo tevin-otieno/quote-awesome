@@ -9,10 +9,10 @@ import { Quote } from '../quote';
 export class QuoteListComponent implements OnInit {
 
   quotes:Quote[]=[
-    new Quote (1, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14),0,0),
-    new Quote (2, 'Marvel', 'I am inevitable', 'Thanos',new Date(2012,9,24),0,0),
-    new Quote (3, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14),0,0),
-    new Quote (4, 'The Rickest Rick', 'Wab laba dub dub', 'Rick C-137',new Date(2011,7,14),0,0),
+    new Quote (0, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14),0,0),
+    new Quote (1, 'Marvel', 'I am inevitable', 'Thanos',new Date(2012,9,24),0,0),
+    new Quote (2, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14),0,0),
+    new Quote (3, 'The Rickest Rick', 'Wab laba dub dub', 'Rick C-137',new Date(2011,7,14),0,0),
   ];
   @Input() quoty!: Quote;
   @Output() isRead = new EventEmitter<boolean>();
@@ -22,22 +22,17 @@ export class QuoteListComponent implements OnInit {
     quote.date = new Date(quote.date)
     this.quotes.push(quote)
   }
-  quoteDelete(isRead:any, index:number){
-    if (isRead) {
-      let toDelete = confirm(`Are you sure you want to delete this Quote?`)
-      if(toDelete){
-        this.quotes.splice(index,1);
-      }
-    }
-  }
-  deleteQuote(read:boolean){
-    this.isRead.emit(read);
+  deleteQuote(index:number){
+    let toDelete = confirm(`Are you sure you want to delete this Quote?`)
+    if(toDelete){
+      this.quotes.splice(index,1);
+    } 
   }
   upvote(){
-    this.quoty.inspiration+=1;
+    this.quoty.inspiration++;
   }
   downvote(){
-    this.quoty.terrible+=1;
+    this.quoty.terrible++;
   }
 
   constructor() { }
