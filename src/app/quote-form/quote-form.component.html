@@ -1,18 +1,18 @@
 <div >
   <h2>Post Quote</h2>
   <hr>
-  <form (ngSubmit)='addQuote()'>
+  <form (ngSubmit)='addQuote()' #quotesForm='ngForm'>
     <div class="form-floating mb-3">
-      <input type="Text" class="form-control" id="name" placeholder="Name" [(ngModel)]="quoted.name" #name='ngModel'>
+      <input type="text" class="form-control" id="name" placeholder="name" [(ngModel)]="quoted.name" name="name" #name='ngModel'>
       <label for="name">Name</label>
     </div>
     <div class="form-floating mb-3">
-      <input type="Text" class="form-control" id="Author" placeholder="Author" [(ngModel)]="quoted.author" #author='ngModel'>
-      <label for="Author">Author</label>
+      <input type="text" class="form-control" id="author" placeholder="author" [(ngModel)]="quoted.author" name="author" #author='ngModel'>
+      <label for="author">Author</label>
     </div>
     <div class="form-floating mb-3">
-      <textarea class="form-control" placeholder="Amaze the world" id="Textarea" [(ngModel)]="quoted.quote" name="quote" #quote='ngModel' style="height: 100px"></textarea>
-      <label for="Textarea">Quote</label>
+      <textarea type="text" class="form-control" placeholder="Amaze the world" id="textarea" [(ngModel)]="quoted.quote" name="quote" #quote='ngModel' style="height: 100px"></textarea>
+      <label for="textarea">Quote</label>
     </div>
     <button type="submit" class="btn btn-outline-primary">Submit Quote</button>
   </form>

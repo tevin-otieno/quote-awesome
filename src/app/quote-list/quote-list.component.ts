@@ -9,36 +9,35 @@ import { Quote } from '../quote';
 export class QuoteListComponent implements OnInit {
 
   quotes:Quote[]=[
-    new Quote (1, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14)),
-    new Quote (1, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14)),
-    new Quote (1, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14)),
-    new Quote (1, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14)),
-    new Quote (1, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14)),
-    new Quote (1, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14)),
-    new Quote (1, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14))
+    new Quote (1, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14),0,0),
+    new Quote (2, 'Marvel', 'I am inevitable', 'Thanos',new Date(2012,9,24),0,0),
+    new Quote (3, 'Spider Man', 'With great power comes great responsibility', 'Uncle Ben',new Date(2002,2,14),0,0),
+    new Quote (4, 'The Rickest Rick', 'Wab laba dub dub', 'Rick C-137',new Date(2011,7,14),0,0),
   ];
-  @Input()
-  quote:any;
-  @Output() isComlete=new EventEmitter<boolean>();
-  get sortQuotes(){
-    return this.quotes.sort((a, b) => {
-      return <any>new Date(b.date) - <any>new Date(a.date);
-    });
+  @Input() quoty!: Quote;
+  @Output() isRead = new EventEmitter<boolean>();
+  addedQuote(quote: Quote){
+    let arraysize = this.quotes.length;
+    quote.id = arraysize+1;
+    quote.date = new Date(quote.date)
+    this.quotes.push(quote)
   }
-  addNewQuote(quote:Quote){
-    const quoteLength=this.quotes.length;
-    quote.id=quoteLength+1;
-    quote.date=new Date(quote.date);
-    this.quotes.push(quote);
+  quoteDelete(isRead:any, index:number){
+    if (isRead) {
+      let toDelete = confirm(`Are you sure you want to delete this Quote?`)
+      if(toDelete){
+        this.quotes.splice(index,1);
+      }
+    }
   }
-  deleteQuote(doDelete:boolean){
-    this.isComlete.emit(doDelete);
+  deleteQuote(read:boolean){
+    this.isRead.emit(read);
   }
-  upvote(isClicked:any,index:any){
-    this.quote.inspiration+=1;
+  upvote(){
+    this.quoty.inspiration+=1;
   }
   downvote(){
-    this.quote.terrible+=1;
+    this.quoty.terrible+=1;
   }
 
   constructor() { }
