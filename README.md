@@ -46,7 +46,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 * [markdown](https://github.com/topics/markdown)
 * [Bootstrap](https://github.com/topics/bootstrap)
 
-## Contact Information 
+## Contact Information
 
 If you have any question or contributions, please email me at tevin.otieno@student.moringaschool.com.
 
